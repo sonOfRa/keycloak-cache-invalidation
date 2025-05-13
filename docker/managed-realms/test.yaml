@@ -1,0 +1,17 @@
+---
+realm: "test"
+enabled: true
+clients:
+  - clientId: "password"
+    publicClient: true
+    directAccessGrantsEnabled: true
+    protocol: "openid-connect"
+components:
+  org.keycloak.storage.UserStorageProvider:
+    - name: custom-user-storage-provider
+      providerId: custom-user-storage-provider
+      config:
+        maxLifespan:
+          - "5000"
+        cachePolicy:
+          - "MAX_LIFESPAN"
