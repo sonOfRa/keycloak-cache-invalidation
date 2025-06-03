@@ -11,7 +11,7 @@ curl -XPOST http://localhost:8456/realms/test/protocol/openid-connect/token -dgr
 ```
 
 3. Change the user's username in the database, *not* via keycloak
-4. Wait 5 seconds (the cache TTL of the federation is one second)
+4. Wait 10 seconds (the cache TTL of the federation is 5 seconds)
 5. Observe that we can still log in with the old username via curl:
 
 ```
